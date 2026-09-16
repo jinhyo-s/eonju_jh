@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드리프트 마스터 | 최고의 카트 레이싱 게임</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: #1a2a3a;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00d2ff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d2ff;
+        }
+
+        /* 메인 히어로 섹션 */
+        .hero {
+            background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background-color: #ff9800;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #f57c00;
+            transform: translateY(-3px);
+        }
+
+        /* 게임 특징 섹션 */
+        .features {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #1a2a3a;
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #00d2ff;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 푸터 섹션 */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .social-links a {
+            margin: 0 10px;
+            color: #fff;
+        }
+
+        /* 모바일 반응형 처리 */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 / 네비게이션 -->
+    <header>
+        <div class="logo">DRIFT MASTER</div>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#intro">게임소개</a></li>
+                <li><a href="#modes">게임모드</a></li>
+                <li><a href="#community">커뮤니티</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메인 배너 (히어로 섹션) -->
+    <section class="hero" id="home">
+        <h1>한계를 넘어선 스피드!</h1>
+        <p>짜릿한 드리프트와 통쾌한 아이템전! 전 세계 플레이어들과 함께 최고의 트랙을 달려보세요.</p>
+        <button class="btn" onclick="alert('다운로드가 시작됩니다!')">지금 바로 무료 다운로드</button>
+    </section>
+
+    <!-- 게임 특징 (게임 모드) -->
+    <section class="features" id="modes">
+        <h2>다양한 게임 모드</h2>
+        <div class="feature-cards">
+            <!-- 스피드전 -->
+            <div class="card">
+                <div class="card-icon">🏎️</div>
+                <h3>스피드전</h3>
+                <p>오직 실력으로 승부합니다! 정교한 코너링과 완벽한 드리프트로 부스터를 모아 누구보다 빠르게 결승선을 통과하세요.</p>
+            </div>
+            
+            <!-- 아이템전 -->
+            <div class="card">
+                <div class="card-icon">💣</div>
+                <h3>아이템전</h3>
+                <p>끝날 때까지 끝난 게 아닙니다! 물파리, 우주선, 미사일 등 다양한 아이템을 활용해 일발 역전의 짜릿함을 느껴보세요.</p>
+            </div>
+
+            <!-- 커스텀/캐릭터 -->
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>나만의 카트 커스텀</h3>
+                <p>수백 가지의 파츠와 데칼로 나만의 개성 넘치는 카트를 조립하고 귀여운 캐릭터들과 함께 레이싱을 즐겨보세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer id="community">
+        <p>&copy; 2026 DRIFT MASTER Corp. All Rights Reserved.</p>
+        <p>이용약관 | 개인정보처리방침 | 고객센터</p>
+        <div class="social-links">
+            <a href="#">페이스북</a>
+            <a href="#">유튜브</a>
+            <a href="#">디스코드</a>
+        </div>
+    </footer>
+
+</body>
+</html>
